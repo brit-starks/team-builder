@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
   
-  const [teammate, setTeammate] = useState('');
+  const [teammate, setTeammate] = useState({});
   
   const newMember = member => {
     setTeammate([...teammate, member]);

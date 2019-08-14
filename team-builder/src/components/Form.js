@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import '../App.css';
 
 const Form = props => {
-  const [teammate, setTeammate] = useState({ name:'', email:'', role:'' });
+  console.log(props);
+  const [teammate, setTeammate] = useState({ 
+    name:'', 
+    email:'', 
+    role:'' });
 
   const changeHandle = e => {
-    console.log(e.target.value);
-    setTeammate({...teammate, [e.target.name]: e.target.value});
+    // console.log(e.target.value);
+    setTeammate({...teammate, [e.target.name]: e.target.value})
   }
 
   const submit = e => {
@@ -22,8 +26,8 @@ const Form = props => {
       type='text'
       name='name'
       placeholder='Name'
-      value={teammate.name}
       onChange={changeHandle}
+      value={teammate.name}
       />
 
       <label hidden htmlFor='email'>Email</label>
